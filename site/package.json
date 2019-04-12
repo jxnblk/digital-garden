@@ -7,10 +7,12 @@
     "build": "gatsby build"
   },
   "dependencies": {
+    "@mdx-deck/gatsby-theme": "^2.1.4",
     "gatsby": "^2.1.32",
     "gatsby-theme-digital-garden": "*",
     "gatsby-theme-digital-garden-blog": "*",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "remark-emoji": "^2.0.2"
   }
 }

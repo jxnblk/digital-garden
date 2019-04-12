@@ -1,15 +1,25 @@
+const remarkPlugins = [require('remark-emoji')]
+
 module.exports = {
   __experimentalThemes: [
     {
       resolve: 'gatsby-theme-digital-garden',
       options: {
-        notesPath: '/txt'
+        notesPath: '/txt',
+        remarkPlugins
       }
     },
     {
       resolve: 'gatsby-theme-digital-garden-blog',
       options: {
         postsPath: '/writing'
+      }
+    },
+    {
+      resolve: '@mdx-deck/gatsby-theme',
+      options: {
+        mdx: false,
+        path: 'decks'
       }
     }
   ],

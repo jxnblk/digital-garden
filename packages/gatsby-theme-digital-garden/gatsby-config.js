@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = options => {
-  const { mdx = true, mdxLayouts = {} } = options
+  const { mdx = true, mdxLayouts = {}, remarkPlugins = [] } = options
 
   return {
     __experimentalThemes: [],
@@ -13,7 +13,8 @@ module.exports = options => {
           defaultLayouts: {
             default: require.resolve('./src/components/layout'),
             ...mdxLayouts
-          }
+          },
+          remarkPlugins
         }
       },
       {
